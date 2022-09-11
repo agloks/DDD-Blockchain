@@ -7,21 +7,19 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC20/extensions/draft-ERC20Permit.sol";
 import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Votes.sol";
 
-contract MyToken is ERC20, ERC20Snapshot, Ownable, ERC20Permit, ERC20Votes {
+contract DecentralizedDonationDAO is ERC20, ERC20Snapshot, Ownable, ERC20Permit, ERC20Votes {
     constructor() ERC20("DecentralizedDonationDAO", "DDD") ERC20Permit("DecentralizedDonationDAO") {}
 
     function snapshot() public onlyOwner {
         _snapshot();
     }
 
-    function mint(address to, uint256 amount)
-        internal
+    function mint(address to, uint256 amount) public
     {
         super._mint(to, amount);
     }
 
-    function burn(address account, uint256 amount)
-        internal
+    function burn(address account, uint256 amount) public
     {
         super._burn(account, amount);
     }

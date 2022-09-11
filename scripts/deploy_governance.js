@@ -1,7 +1,7 @@
 const hre = require("hardhat");
 
 async function deploy() {
-  const ADDRESS_TOKEN = "0xC29f81CA53171D259EE29FF14b8aFB2D73486AA7"
+  const ADDRESS_TOKEN = "0x78e944FbEc04169cBFfbFAc2178b41ac78EaADE1"
   const Lock = await hre.ethers.getContractFactory("DDDGovernance");
   const lock = await Lock.deploy(ADDRESS_TOKEN);
 

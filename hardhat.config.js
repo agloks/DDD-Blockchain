@@ -69,7 +69,7 @@ module.exports = {
     apiKey: {
       mainnet: process.env.ETHERSCAN_APIKEY,
       kovan: process.env.ETHERSCAN_APIKEY,
-      polygonMumbai: process.env.POLYGON_APYKEY
+      polygonMumbai: process.env.POLYGON_APIKEY
     }
   }
 };
